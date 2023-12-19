@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>"></link>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Shots Project</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body class="project-details-body">
+
+    <header class="project-details-header">
+        <h1>Architecture Shots Project</h1>
+    </header>
+
+    <nav class="project-details-nav">
+        <a href="portfolio.html">Back to Home</a>
+    </nav>
+
+    <section class="project-details-section architecture-section">
+        <h2>Project Details</h2>
+        <p class="project-description">Explore the beauty of architecture through a unique lens.</p>
+
+        <div class="photo-gallery">
+        <div class="photo" onclick="openLightbox('images/architecture/Abstract.jpeg', 'Splashes of Color')">
+            <img src="images/architecture/Abstract.jpeg" alt="Architecture Image ">
+            <div class="photo-overlay">
+                <p>Splashes of Color</p>
+            </div>
+        </div>
+        <div class="photo" onclick="openLightbox('images/architecture/Architecture.jpeg', 'Splashes of Color')">
+            <img src="images/architecture/Architecture.jpeg" alt="Landscape Photo 2">
+            <div class="photo-overlay">
+                <p>Splashes of Color</p>
+            </div>
+        </div>
+        <div class="photo" onclick="openLightbox('images/architecture/architecture1.jpg', 'Splashes of Color')">
+            <img src="images/architecture/architecture1.jpg" alt="Landscape Photo 2">
+            <div class="photo-overlay">
+                <p>Splashes of Color</p>
+            </div>
+        </div>
+        <div class="photo" onclick="openLightbox('images/architecture/architecture4.jpeg', 'Splashes of Color')">
+            <img src="images/architecture/architecture4.jpeg" alt="Landscape Photo 2">
+            <div class="photo-overlay">
+                <p>Splashes of Color</p>
+            </div>
+        </div>
+        <div class="photo" onclick="openLightbox('images/architecture/EFFECTS-02.jpeg', 'Splashes of Color')">
+            <img src="images/architecture/EFFECTS-02.jpeg" alt="Landscape Photo 2">
+            <div class="photo-overlay">
+                <p>Splashes of Color</p>
+            </div>
+        </div>
+
+            <!-- Add more photos as needed -->
+        </div>
+    </section>
+
+    <footer class="project-details-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><a href="mailto:archit47a@gmail.com">Mail Me</a></li>
+                    <li><a href="https://wa.me/919990951644/?text=Hi Archit, What's up" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.linkedin.com/in/archit-mohan-shukla-0b2b15209/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; With love 🕉️📸</p>
+        </div>
+    </footer>
+  <!-- Modal window for larger images -->
+  <div class="modal" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+</div>
+
+<script>
+    function openLightbox(imageSrc, caption) {
+        const modal = document.getElementById("lightbox");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    }
+
+    function closeLightbox() {
+        const modal = document.getElementById("lightbox");
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling when lightbox is closed
+    }
+
+    // Close modal if clicked outside the image
+    window.addEventListener("click", (event) => {
+        const modal = document.getElementById("lightbox");
+        if (event.target === modal) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation for the lightbox
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var grid = document.querySelector('.photo-gallery');
+        var masonry = new Masonry(grid, {
+            itemSelector: '.photo',
+            columnWidth: '.photo',
+            percentPosition: true
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abstract Art Project</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body class="project-details-body">
+
+    <header class="project-details-header">
+        <h1>Abstract Art Project</h1>
+    </header>
+
+    <nav class="project-details-nav">
+        <a href="portfolio.html">Back to Home</a>
+    </nav>
+
+    <section class="project-details-section abstract-section">
+        <h2>Project Details</h2>
+        <p class="project-description">Experience the world of abstract art through vibrant colors and unique compositions.</p>
+
+        <div class="photo-gallery">
+            <div class="photo" onclick="openLightbox('images/abstract/Abs1.jpg', 'Vivid Harmony')">
+                <img src="images/abstract/Abs1.jpg" alt="Abstract Photo 1">
+                <div class="photo-overlay">
+                    <p>Vivid Harmony</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/Abs2.jpg', 'Splashes of Color')">
+                <img src="images/abstract/Abs2.jpg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/Abs3.jpg', 'Splashes of Color')">
+                <img src="images/abstract/Abs3.jpg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/Abs4.jpg', 'Splashes of Color')">
+                <img src="images/abstract/Abs4.jpg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/abs5.jpeg', 'Splashes of Color')">
+                <img src="images/abstract/abs5.jpeg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/abs6.jpg', 'Splashes of Color')">
+                <img src="images/abstract/abs6.jpg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/abs7.jpg', 'Splashes of Color')">
+                <img src="images/abstract/abs7.jpg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/abs8.jpeg', 'Splashes of Color')">
+                <img src="images/abstract/abs8.jpeg" alt="Abstract Photo 2">
+                <div class="photo-overlay">
+                    <p>Splashes of Color</p>
+                </div>
+            </div>  <div class="photo" onclick="openLightbox('images/abstract/abs9.jpg', 'Splashes of Color')">
+                  <img src="images/abstract/abs9.jpg" alt="Abstract Photo 2">
+                  <div class="photo-overlay">
+                      <p>Splashes of Color</p>
+                  </div>
+              </div>
+            <!-- Add more photos as needed -->
+            <!-- Repeat the structure for a total of 15 photos -->
+        </div>
+    </section>
+
+    <footer class="project-details-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <p>Email: <a href="mailto:archit47a@gmail.com">Mail@Archit</a></p>
+                <p>WhatsApp: <a href="https://wa.me/919990951644/?text=Hi Archit, Whatsup" target="_blank">Click to Chat</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/archit-mohan-shukla-0b2b15209/" target="_blank">Pay a Visit</a></p>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; With love 🕉️📸</p>
+        </div>
+    </footer>
+
+   <!-- Modal window for larger images -->
+   <div class="modal">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+</div>
+
+<script>
+    // Your existing JavaScript code for the lightbox goes here
+    function openLightbox(imageSrc, caption) {
+        const modal = document.querySelector(".modal");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.style.display = 'block';
+        document.body.classList.add('modal-open'); // Prevent scrolling when lightbox is open
+    }
+
+    function closeLightbox() {
+        const modal = document.querySelector(".modal");
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open'); // Enable scrolling when lightbox is closed
+    }
+
+    // Close modal if clicked outside the image
+    window.addEventListener("click", (event) => {
+        const modal = document.querySelector(".modal");
+        if (event.target === modal) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation for the lightbox
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+</script>
+</body>
+</html>
