@@ -9,11 +9,11 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #d4c3c3;
 }
 
 .project-details-header {
-    background-color: #333;
+    background-color: #1b1919;
     color: #fff;
     text-align: center;
     padding: 20px;
@@ -59,11 +59,16 @@ body {
 
 .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
 }
 
 .photo {
+    width: auto;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
     border-radius: 8px;
@@ -154,8 +159,6 @@ body {
     color: #f39c12; /* Accent color on hover */
 }
 
-/* Your existing styles */
-
 /* Updated styles for the footer copyright section */
 .footer-copyright {
     margin-top: 20px;
@@ -165,12 +168,11 @@ body {
     letter-spacing: 1px;
     opacity: 0.8;
 }
-/* Your existing styles here */
 
 /* Additional styles for the lightbox */
 .modal {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -195,5 +197,3 @@ body {
 }
 
 /* Your existing styles here */
-
-/* Your existing styles */

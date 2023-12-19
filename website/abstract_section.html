@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abstract Art Project</title>
@@ -68,19 +69,12 @@
                 <div class="photo-overlay">
                     <p>Splashes of Color</p>
                 </div>
-            </div>  
-            <div class="photo" onclick="openLightbox('images/abstract/abs9.jpg', 'Splashes of Color')">
+            </div>  <div class="photo" onclick="openLightbox('images/abstract/abs9.jpg', 'Splashes of Color')">
                   <img src="images/abstract/abs9.jpg" alt="Abstract Photo 2">
                   <div class="photo-overlay">
                       <p>Splashes of Color</p>
                   </div>
               </div>
-              <div class="photo" onclick="openLightbox('images/abstract/Lightning1_ab.jpg', 'Splashes of Color')">
-                <img src="images/abstract/Lightning1_ab.jpg" alt="Abstract Photo 2">
-                <div class="photo-overlay">
-                    <p>Splashes of Color</p>
-                </div>
-            </div>
             <!-- Add more photos as needed -->
             <!-- Repeat the structure for a total of 15 photos -->
         </div>
@@ -108,85 +102,48 @@
         </div>
     </footer>
 
-    <!-- Modal window for larger images -->
-    <div class="modal">
-        <span class="close" onclick="closeLightbox()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div id="modalCaption"></div>
-    </div>
+   <!-- Modal window for larger images -->
+   <div class="modal">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+</div>
 
-    <script>
-      // Your existing JavaScript code for the lightbox goes here
+<script>
+    // Your existing JavaScript code for the lightbox goes here
+    function openLightbox(imageSrc, caption) {
+        const modal = document.querySelector(".modal");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
 
-function openLightbox(imageSrc, caption) {
-    const modal = document.getElementById("lightbox");
-    const modalImage = document.getElementById("modalImage");
-    const modalCaption = document.getElementById("modalCaption");
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
 
-    modalImage.src = imageSrc;
-    modalImage.alt = caption;
-    modalCaption.textContent = caption;
-
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
-}
-
-function closeLightbox() {
-    const modal = document.getElementById("lightbox");
-    modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling when lightbox is closed
-}
-
-// Close modal if clicked outside the image
-window.addEventListener("click", (event) => {
-    const modal = document.getElementById("lightbox");
-    if (event.target === modal) {
-        closeLightbox();
+        modal.style.display = 'block';
+        document.body.classList.add('modal-open'); // Prevent scrolling when lightbox is open
     }
-});
 
-// Keyboard navigation for the lightbox
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeLightbox();
+    function closeLightbox() {
+        const modal = document.querySelector(".modal");
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open'); // Enable scrolling when lightbox is closed
     }
-});
 
-      function openLightbox(imageSrc, caption) {
-    const modal = document.querySelector(".modal");
-    const modalImage = document.getElementById("modalImage");
-    const modalCaption = document.getElementById("modalCaption");
+    // Close modal if clicked outside the image
+    window.addEventListener("click", (event) => {
+        const modal = document.querySelector(".modal");
+        if (event.target === modal) {
+            closeLightbox();
+        }
+    });
 
-    modalImage.src = imageSrc;
-    modalImage.alt = caption;
-    modalCaption.textContent = caption;
-
-    modal.style.display = 'block';
-    document.body.classList.add('modal-open'); // Prevent scrolling when lightbox is open
-}
-
-function closeLightbox() {
-    const modal = document.querySelector(".modal");
-    modal.style.display = 'none';
-    document.body.classList.remove('modal-open'); // Enable scrolling when lightbox is closed
-}
-
-// Close modal if clicked outside the image
-window.addEventListener("click", (event) => {
-    const modal = document.querySelector(".modal");
-    if (event.target === modal) {
-        closeLightbox();
-    }
-});
-
-// Keyboard navigation for the lightbox
-document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-        closeLightbox();
-    }
-});
-
-
-    </script>
+    // Keyboard navigation for the lightbox
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+</script>
 </body>
 </html>
