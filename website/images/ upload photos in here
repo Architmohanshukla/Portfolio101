@@ -1,4 +1,0 @@
-Create a folder named images in your project directory.
-Place your photo files (e.g., photo1.jpg, photo2.jpg) inside the images folder.
-n your HTML file, where the photo gallery section is located, add the appropriate
-src attributes to the img tags to reference the image files. For example:
