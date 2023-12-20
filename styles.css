@@ -39,6 +39,17 @@ section {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 }
+/* Reset link styles and set the color */
+a {
+    color: #0077cc; /* Change to your desired link color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Style links on hover for a subtle effect */
+a:hover {
+    text-decoration: underline; /* Add underline on hover if desired */
+    color: #70af57; /* Change to a slightly different color on hover if desired */
+}
 
 h2 {
     color: #333;
