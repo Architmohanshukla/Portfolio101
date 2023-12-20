@@ -155,7 +155,9 @@ h2 {
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
-
+.photo-gallery .photo-overlay {
+    background: rgba(255, 99, 71, 0.7); /* Coral overlay color for portrait section */
+}
 .photo:hover {
     transform: scale(1.1);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -165,7 +167,7 @@ h2 {
     opacity: 1;
 }
 
-.photo-overlay p {
+.photo-overlay p, em {
     padding: 20px;
     margin: 0;
 }
