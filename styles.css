@@ -162,11 +162,7 @@ h2 {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.photo:hover .photo-overlay {
-    opacity: 1;
-}
-
-.photo-overlay p, em {
+.photo-overlay p, {
     padding: 20px;
     margin: 0;
 }
