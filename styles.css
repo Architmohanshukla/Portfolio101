@@ -71,6 +71,42 @@ h2 {
     background-color: #ddd;
     color: #333;
 }
+/* Add this CSS to your existing styles.css file */
+
+.profile-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.profile-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 50%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.profile-image:hover .overlay {
+    opacity: 1;
+}
+
 
 /* Gallery styles */
 .gallery {
