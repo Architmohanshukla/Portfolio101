@@ -1,0 +1,225 @@
+/* General styling for the project details sections */
+.project-details-section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff; /* Common background color for all sections */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+body.project-details-body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.project-details-header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.project-details-header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+.project-details-nav {
+    background-color: #34495e;
+    padding: 10px;
+    text-align: center;
+}
+
+.project-details-nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project-description {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+
+/* Photo gallery styles */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    width: calc(33.33% - 10px); /* Adjust as needed for spacing */
+    margin-bottom: 20px;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Overlay for the nature section */
+.nature-gallery .photo-overlay {
+    background: rgba(46, 204, 113, 0.8); /* Green overlay color for nature */
+}
+
+/* Overlay for the architecture section */
+.architecture-gallery .photo-overlay {
+    background: rgba(52, 152, 219, 0.8); /* Blue overlay color for architecture */
+}
+
+/* Overlay for the abstract section */
+.abstract-gallery .photo-overlay {
+    background: rgba(241, 148, 138, 0.8); /* Warm overlay color for abstract */
+}
+
+/* Overlay for the portrait section */
+.portrait-gallery .photo-overlay {
+    background: rgba(255, 99, 71, 0.7); /* Coral overlay color for portrait section */
+}
+
+/* Hover effect for portrait section */
+.portrait-gallery .photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+
+
+/* Hover effect */
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Hover effect for nature section */
+.nature-gallery .photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+/* Hover effect for architecture section */
+.architecture-gallery .photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+/* Hover effect for abstract section */
+.abstract-gallery .photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+/* Additional styles specific to the abstract section */
+.abstract-gallery .photo-overlay p {
+    font-size: 1.4em; /* Larger font size for abstract overlay text */
+    text-align: center;
+}
+
+/* Additional styles for the abstract section footer */
+.abstract-section .project-details-footer {
+    background-color: #f39c12; /* Warm color for abstract section footer */
+    color: #fff; /* White text color for abstract section footer */
+    text-align: center;
+    padding: 20px;
+}
+/* ... (existing styles) */
+
+/* Overlay and Hover Effect Styles */
+
+/* General overlay styling */
+.photo-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay color */
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for opacity */
+}
+
+/* Hover effect */
+.photo:hover {
+    transform: scale(1.05);
+}
+
+/* Hover effect for overlay */
+.photo:hover .photo-overlay {
+    opacity: 1;
+}
+
+/* Overlay text styles */
+.photo-overlay p {
+    margin: 0;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+
+
+
+/* Additional styles for the detailed footer section */
+.project-details-footer {
+    background-color: #333; /* Dark background color for the footer */
+    color: #fff; /* White text color for the footer */
+    padding: 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-contact,
+.footer-social {
+    flex: 1;
+}
+
+.footer-contact h3,
+.footer-social h3 {
+    color: #f39c12; /* Accent color for heading in the footer */
+}
+.footer-contact ul,
+.footer-social ul {
+    list-style: none;
+    padding: 0;
+}
+.footer-contact li,
+.footer-social li {
+    margin-bottom: 8px;
+}
+.footer-contact a,
+.footer-social a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out; /* Smooth transition for link color */
+}
+.footer-contact a:hover,
+.footer-social a:hover {
+    color: #f39c12; /* Accent color on hover */
+}
+
+/* ... (existing styles) */
+
+/* Updated styles for the footer copyright section */
+.footer-copyright {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    font-family: 'Roboto', sans-serif; /* Use your preferred font-family */
+    color: #999; /* Adjust the color as needed */
+    letter-spacing: 1px;
+    opacity: 0.8;
+}

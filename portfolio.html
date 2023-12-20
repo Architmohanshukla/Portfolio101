@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📸</text></svg>">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archit's Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>Archit Mohan Shukla</h1>
+        <p>Portfolio</p>
+    </header>
+
+    <section class="about-me-section">
+        <h2>About Me</h2>
+        <p>Welcome to my world of visual storytelling! I'm Archit Mohan Shukla, a passionate photographer on a journey to capture the beauty and essence of the world through my lens.</p>
+        <p>
+            With a keen eye for detail and a love for vibrant colors, I specialize in landscape and abstract photography. Each click is a moment frozen in time, telling a unique story and evoking emotions.
+        </p>
+        <p>
+            Photography, for me, is not just a profession but a way of life. It's about finding art in the ordinary, capturing the extraordinary, and sharing the joy of visual experiences with the world, and relive the moment. 
+        </p>
+        <p>
+            Images are fossils that record the imprints of nature, taking us through moments in time and fueling our consciousness with joy. Join me on this visual odyssey as we explore the beauty that surrounds us, one frame at a time. Thank you for being a part of this incredible journey!
+        Passionate about capturing the subtle details of nature. </p>
+    </section>
+
+    <section class="gallery">
+        <h2>Photo Gallery</h2>
+        <div class="photo-gallery">
+            <!-- Gallery Photos -->
+            <div class="photo" onclick="openLightbox('images/nature/Nat5.jpeg', 'Nature Image')">
+                <img src="images/nature/Nat5.jpeg" alt="Nature Photo">
+                <em>Nature</em> 
+            </div>
+            <div class="photo" onclick="openLightbox('images/landscape/landscape5.jpg', 'Landscape Image')">
+                <img src="images/landscape/landscape5.jpg" alt="Landscape Photo">
+                <em>Landscape</em>
+            </div>
+            <div class="photo" onclick="openLightbox('images/abstract/abs9.jpg', 'Abstract Image')">
+                <img src="images/abstract/abs9.jpg" alt="Abstract Photo">
+                <em>Abstract</em>
+            </div>
+            <div class="photo" onclick="openLightbox('images/portraits/ps1.jpeg', 'Portrait Image')">
+                <img src="images/portraits/ps1.jpeg" alt="Portrait Photo">
+                <em>Portrait</em>
+            </div>
+            <div class="photo" onclick="openLightbox('images/architecture/architecture1.jpg', 'Architecture Shot')">
+                <img src="images/architecture/architecture1.jpg" alt="Architecture Shot">
+                <em>Architecture</em>
+            </div>
+            <!-- Add more photos as needed -->
+        </div>
+    </section>
+
+    <div class="toggle-switch" onclick="toggleSwitch()">
+        <div class="slider"></div>
+    </div>
+
+    <section class="projects">
+        <h2>Projects</h2>
+        <!-- Accordion for project descriptions -->
+        <div class="accordion">
+            <a href="nature_section.html" target="_blank">
+                <div class="project" data-category="nature">
+                    <h3>Nature Photography</h3>
+                    <div class="cover-image">
+                        <img src="images/nature/nature6.jpeg" alt="Nature Cover">
+                    </div>
+                    <p>Nature's poetry unfolds in every image, inviting you to witness the sublime beauty that surrounds us.</p>
+                </div>
+            </a>
+            <a href="architecture_section.html" target="_blank">
+                <div class="project" data-category="architecture">
+                    <h3>Architecture Shots</h3>
+                    <div class="cover-image">
+                        <img src="images/architecture/architecture4.jpeg" alt="Architecture Cover">
+                    </div>
+                    <p>Archit's lens captures the soul of structures, unveiling the intricate details and unique narratives of architecture.</p>
+                </div>
+            </a>
+            <a href="landscape.html" target="_blank">
+                <div class="project" data-category="Landscape">
+                    <h3>Landscape Photos</h3>
+                    <div class="cover-image">
+                        <img src="images/landscape/landscape5.jpg" alt="Landscape Cover">
+                    </div>
+                    <p>Let the landscapes transport you to distant realms, where nature's wonders unfold in panoramic glory.</p>
+                </div>
+            </a>
+            <a href="portrait_section.html" target="_blank">
+                <div class="project" data-category="portraits">
+                    <h3>Portrait Images</h3>
+                    <div class="cover-image">
+                        <img src="images/portraits/ps1.jpeg" alt="Portrait Cover">
+                    </div>
+                    <p>Description of Portrait photography project.</p>
+                </div>
+            </a>
+            <a href="abstract_section.html" target="_blank">
+                <div class="project" data-category="Abstract">
+                    <h3>Abstract Photos</h3>
+                    <div class="cover-image">
+                        <img src="images/abstract/abs8.jpeg" alt="Abstract Cover">
+                    </div>
+                    <p>Abstract Shots: where imagination knows no bounds, and colors paint their own stories</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="project-details-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><a href="mailto:archit47a@gmail.com">Mail Me</a></li>
+                    <li><a href="https://wa.me/919990951644/?text=Hi Archit, What's up" target="_blank">WhatsApp</a></li>
+                    <li><a href="https://www.linkedin.com/in/archit-mohan-shukla-0b2b15209/" target="_blank">LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; With love 🕉️📸</p>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <span class="close" onclick="closeLightbox()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

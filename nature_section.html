@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📸</text></svg>"></link>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Photography Project</title>
+    <link rel="stylesheet" href="styless.css">
+</head>
+<body class="project-details-body">
+
+    <header class="project-details-header">
+        <h1>Nature Photography Project</h1>
+    </header>
+
+    <nav class="project-details-nav">
+        <a href="portfolio.html">Back to Home</a>
+    </nav>
+
+    <section class="project-details-section nature-gallery">
+        <h2>Project Details</h2>
+
+        <p class="project-description">Capture the essence of the great outdoors with our diverse collection of nature photographs.</p>
+
+        <div class="photo-gallery">
+            <div class="photo" onclick="openLightbox('images/nature/Nat1.jpg', 'Nimble Nibblers')">
+                <img src="images/nature/Nat1.jpg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Nimble Nibblers</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/Nat2.jpg', 'Mystic Wilderness')">
+                <img src="images/nature/Nat2.jpg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Mystic Wilderness</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/nat3.jpg', 'Nutcracker Chronicles')">
+                <img src="images/nature/nat3.jpg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Nutcracker Chronicles</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/nat4.jpeg', 'Blooming Symphony')">
+                <img src="images/nature/nat4.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Blooming Symphony</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/nat5.jpeg', 'Natures Symphony')">
+                <img src="images/nature/nat5.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Nature's Symphony</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/nature.jpeg', 'Curious Capers')">
+                <img src="images/nature/nature.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Curious Capers</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/Nature1.jpeg', 'Enchanted Forest')">
+                <img src="images/nature/Nature1.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Enchanted Forest</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/Nature2.jpeg', 'Natures Masquerade')">
+                <img src="images/nature/Nature2.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Nature's Masquerade</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/Nature3.JPG', 'Hanging Around Happiness')">
+                <img src="images/nature/Nature3.JPG" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Hanging Around Happiness</p>
+                </div>
+            </div>
+
+            <div class="photo" onclick="openLightbox('images/nature/nature5.jpeg', 'Vivid Harmony')">
+                <img src="images/natureer/nature5.jpeg" alt="upload a diff photo of monkey family">
+                <div class="photo-overlay">
+                    <p>Some good captions</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/nature6.jpeg', 'Feathers in Flight')">
+                <img src="images/nature/nature6.jpeg" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Feathers in Flight</p>
+                </div>
+            </div>
+            <div class="photo" onclick="openLightbox('images/nature/Nature7.JPG', 'Winged Harmony')">
+                <img src="images/nature/Nature7.JPG" alt="Nature Photo 1">
+                <div class="photo-overlay">
+                    <p>Winged Harmony</p>
+                </div>
+            </div>
+
+            <!-- Add more photos as needed -->
+        </div>
+    </section>
+
+    <footer class="project-details-footer">
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Contact Information</h3>
+                <ul>
+                <li><a href="mailto:archit47a@gmail.com">Mail Me</a> </li>
+
+                <li><a href="https://wa.me/919990951644/?text= Hi Archit, Whatsup" target="_blank">WhatsApp</a></li>
+
+                <li><a href="https://www.linkedin.com/in/archit-mohan-shukla-0b2b15209/" target="_blank">LinkedIn<a/></li>
+</ul>
+            </div>
+            <div class="footer-social">
+                <h3>Connect with Us</h3>
+                <ul>
+                    <li><a href="#" target="_blank">Facebook</a></li>
+                    <li><a href="#" target="_blank">Twitter</a></li>
+                    <li><a href="#" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-copyright">
+           <p>&copy; With love 🕉️📸</p>
+        </div>
+    </footer>
+<!-- Modal window for larger images -->
+<div class="modal" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="modal-content" id="modalImage">
+    <div id="modalCaption"></div>
+</div>
+
+<script>
+    function openLightbox(imageSrc, caption) {
+        const modal = document.getElementById("lightbox");
+        const modalImage = document.getElementById("modalImage");
+        const modalCaption = document.getElementById("modalCaption");
+
+        modalImage.src = imageSrc;
+        modalImage.alt = caption;
+        modalCaption.textContent = caption;
+
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    }
+
+    function closeLightbox() {
+        const modal = document.getElementById("lightbox");
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling when lightbox is closed
+    }
+
+    // Close modal if clicked outside the image
+    window.addEventListener("click", (event) => {
+        const modal = document.getElementById("lightbox");
+        if (event.target === modal) {
+            closeLightbox();
+        }
+    });
+
+    // Keyboard navigation for the lightbox
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var grid = document.querySelector('.photo-gallery');
+        var masonry = new Masonry(grid, {
+            itemSelector: '.photo',
+            columnWidth: '.photo',
+            percentPosition: true
+        });
+    });
+</script>
+</body>
+</html>
