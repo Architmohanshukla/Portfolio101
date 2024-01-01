@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f9f9f9;
     color: #333;
 }
 
@@ -34,45 +34,15 @@ section {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #eee;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Reset link styles and set the color */
-a {
-    color: #4a335a; /* Change to your desired link color */
-    text-decoration: none; /* Remove underline */
-}
-
-/* Style links on hover for a subtle effect */
-a:hover {
-    text-decoration: underline; /* Add underline on hover if desired */
-    color: #70af57; /* Change to a slightly different color on hover if desired */
-}
-
-h2 {
-    color: #333;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.about-me-section {
-    background-color: #ddd;
-    text-wrap: wrap ;
-    padding: 20px;
-    text-align: justify;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.about-me-section:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    background-color: #ddd;
-    color: #333;
+section:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Your existing profile image styles */
@@ -114,16 +84,14 @@ h2 {
 
 /* Gallery styles */
 .gallery {
-    background-color: #ddd;
+    background-color: #fff;
     padding: 20px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .gallery:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    background-color: #ddd;
-    color: #333;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .photo-gallery {
@@ -142,10 +110,8 @@ h2 {
 }
 
 .photo:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    background-color: #ddd;
-    color: #333;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .photo img {
@@ -188,10 +154,8 @@ h2 {
 }
 
 .project:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-    background-color: #fff;
-    color: #333;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .cover-image {
@@ -313,5 +277,3 @@ h2 {
     color: #fff;
     cursor: pointer;
 }
-
-/* Add your existing JavaScript code to script.js */
